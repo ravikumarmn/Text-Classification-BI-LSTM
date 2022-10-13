@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "train.py", line 135, in <module>
+    model,test_dataloader = main(params)
+  File "train.py", line 109, in main
+    print(f"Using device : {config.device}")
+AttributeError: 'dict' object has no attribute 'device'

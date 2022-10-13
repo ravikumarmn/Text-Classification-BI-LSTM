@@ -1,0 +1,96 @@
+wandb_version: 1
+
+BATCH_SIZE:
+  desc: null
+  value: 16
+EMBED_SIZE:
+  desc: null
+  value: 32
+EPOCHS:
+  desc: null
+  value: 100
+HIDDEN_SIZE:
+  desc: null
+  value: 32
+LEARNING_RATE:
+  desc: null
+  value: 0.001
+OUT_DIM:
+  desc: null
+  value: 16
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.4
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.14
+    start_time: 1665600734.658143
+    t:
+      1:
+      - 1
+      - 5
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 53
+      - 55
+      3:
+      - 13
+      - 15
+      - 16
+      - 23
+      4: 3.7.14
+      5: 0.13.4
+      8:
+      - 5
+base_dir:
+  desc: null
+  value: /content/drive/MyDrive/binary_classification/text_classification/
+device:
+  desc: null
+  value: cuda
+emb_vec_file:
+  desc: null
+  value: dataset/emb_vec.pkl
+file_name:
+  desc: null
+  value: dataset/train.tsv
+input_column:
+  desc: null
+  value:
+  - 3
+max_seq_len:
+  desc: null
+  value: 500
+n_labels:
+  desc: null
+  value: 1
+patience:
+  desc: null
+  value: 3
+runtime_name:
+  desc: null
+  value: base_bidi_lstm_seq_hidden_mean_loss_sum_added_layer_dropout_0.5_relu_w2v_pre_trained_embedding
+save_checkpoint_dir:
+  desc: null
+  value: /content/drive/MyDrive/binary_classification/text_classification/trained_models/
+target_columns:
+  desc: null
+  value:
+  - 1
+train_test_data:
+  desc: null
+  value: dataset/train_test_vocabed.pkl
+vocab_file_name:
+  desc: null
+  value: dataset/vocab.json
+weight_decay:
+  desc: null
+  value: 1.0e-05
+word2vec_file:
+  desc: null
+  value: dataset/word2vectors_32.model

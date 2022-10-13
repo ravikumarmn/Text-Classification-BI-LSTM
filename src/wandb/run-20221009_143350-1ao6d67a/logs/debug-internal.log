@@ -1,0 +1,233 @@
+2022-10-09 14:33:50,887 INFO    StreamThr :1316 [internal.py:wandb_internal():91] W&B internal server running at pid: 1316, started at: 2022-10-09 14:33:50.880553
+2022-10-09 14:33:50,901 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: status
+2022-10-09 14:33:50,904 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: status
+2022-10-09 14:33:50,908 DEBUG   SenderThread:1316 [sender.py:send():303] send: header
+2022-10-09 14:33:50,908 INFO    WriterThread:1316 [datastore.py:open_for_write():75] open: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/run-1ao6d67a.wandb
+2022-10-09 14:33:50,922 DEBUG   SenderThread:1316 [sender.py:send():303] send: run
+2022-10-09 14:33:51,438 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: check_version
+2022-10-09 14:33:51,446 INFO    SenderThread:1316 [dir_watcher.py:__init__():216] watching files in: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files
+2022-10-09 14:33:51,446 INFO    SenderThread:1316 [sender.py:_start_run_threads():931] run started: 1ao6d67a with start time 1665326030.897548
+2022-10-09 14:33:51,447 DEBUG   SenderThread:1316 [sender.py:send():303] send: summary
+2022-10-09 14:33:51,454 INFO    SenderThread:1316 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 14:33:51,457 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: check_version
+2022-10-09 14:33:51,512 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: run_start
+2022-10-09 14:33:51,516 DEBUG   HandlerThread:1316 [meta.py:__init__():34] meta init
+2022-10-09 14:33:51,517 DEBUG   HandlerThread:1316 [meta.py:__init__():49] meta init done
+2022-10-09 14:33:51,517 DEBUG   HandlerThread:1316 [meta.py:probe():215] probe
+2022-10-09 14:33:51,537 DEBUG   HandlerThread:1316 [git.py:repo():40] git repository is invalid
+2022-10-09 14:33:51,537 DEBUG   HandlerThread:1316 [meta.py:_save_pip():53] save pip
+2022-10-09 14:33:51,547 DEBUG   HandlerThread:1316 [meta.py:_save_pip():67] save pip done
+2022-10-09 14:33:51,548 DEBUG   HandlerThread:1316 [meta.py:probe():253] probe done
+2022-10-09 14:33:51,628 DEBUG   SenderThread:1316 [sender.py:send():303] send: files
+2022-10-09 14:33:51,628 INFO    SenderThread:1316 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-10-09 14:33:51,647 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-09 14:33:51,648 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: stop_status
+2022-10-09 14:33:51,900 DEBUG   SenderThread:1316 [sender.py:send():303] send: telemetry
+2022-10-09 14:33:52,313 INFO    Thread-17 :1316 [upload_job.py:push():143] Uploaded file /tmp/tmpeji27yk2wandb/oc6k0ca2-wandb-metadata.json
+2022-10-09 14:33:52,451 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_created():275] file/dir created: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/wandb-summary.json
+2022-10-09 14:33:52,451 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_created():275] file/dir created: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:33:52,453 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_created():275] file/dir created: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/wandb-metadata.json
+2022-10-09 14:33:52,455 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_created():275] file/dir created: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/requirements.txt
+2022-10-09 14:33:55,455 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:33:57,460 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:33:59,465 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:01,470 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:03,475 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:05,479 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:06,903 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-09 14:34:06,904 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: stop_status
+2022-10-09 14:34:07,485 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:08,309 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: partial_history
+2022-10-09 14:34:08,310 DEBUG   SenderThread:1316 [sender.py:send():303] send: history
+2022-10-09 14:34:08,311 DEBUG   SenderThread:1316 [sender.py:send():303] send: summary
+2022-10-09 14:34:08,322 INFO    SenderThread:1316 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 14:34:08,487 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/wandb-summary.json
+2022-10-09 14:34:09,489 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:11,493 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:13,498 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:15,505 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:17,509 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:19,514 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:19,691 DEBUG   SenderThread:1316 [sender.py:send():303] send: stats
+2022-10-09 14:34:20,557 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: partial_history
+2022-10-09 14:34:20,569 DEBUG   SenderThread:1316 [sender.py:send():303] send: history
+2022-10-09 14:34:20,570 DEBUG   SenderThread:1316 [sender.py:send():303] send: summary
+2022-10-09 14:34:20,577 INFO    SenderThread:1316 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 14:34:21,520 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/wandb-summary.json
+2022-10-09 14:34:21,522 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:21,525 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/config.yaml
+2022-10-09 14:34:22,148 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-09 14:34:22,148 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: stop_status
+2022-10-09 14:34:23,525 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:25,529 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:27,533 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:29,538 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:31,547 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:32,806 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: partial_history
+2022-10-09 14:34:32,810 DEBUG   SenderThread:1316 [sender.py:send():303] send: history
+2022-10-09 14:34:32,812 DEBUG   SenderThread:1316 [sender.py:send():303] send: summary
+2022-10-09 14:34:32,823 INFO    SenderThread:1316 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 14:34:33,568 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/wandb-summary.json
+2022-10-09 14:34:33,569 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:35,573 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:37,400 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-09 14:34:37,400 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: stop_status
+2022-10-09 14:34:37,578 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:39,583 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:41,587 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:43,592 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:44,941 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: partial_history
+2022-10-09 14:34:44,942 DEBUG   SenderThread:1316 [sender.py:send():303] send: history
+2022-10-09 14:34:44,942 DEBUG   SenderThread:1316 [sender.py:send():303] send: summary
+2022-10-09 14:34:44,951 INFO    SenderThread:1316 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 14:34:45,596 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/wandb-summary.json
+2022-10-09 14:34:45,600 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:47,601 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:49,605 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:49,905 DEBUG   SenderThread:1316 [sender.py:send():303] send: stats
+2022-10-09 14:34:51,611 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:52,666 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-09 14:34:52,667 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: stop_status
+2022-10-09 14:34:53,616 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:55,620 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:57,133 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: partial_history
+2022-10-09 14:34:57,134 DEBUG   SenderThread:1316 [sender.py:send():303] send: history
+2022-10-09 14:34:57,136 DEBUG   SenderThread:1316 [sender.py:send():303] send: summary
+2022-10-09 14:34:57,147 INFO    SenderThread:1316 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 14:34:57,625 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/wandb-summary.json
+2022-10-09 14:34:57,627 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:34:59,629 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:01,634 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:03,638 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:05,643 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:07,650 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:07,917 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-09 14:35:07,918 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: stop_status
+2022-10-09 14:35:09,366 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: partial_history
+2022-10-09 14:35:09,370 DEBUG   SenderThread:1316 [sender.py:send():303] send: history
+2022-10-09 14:35:09,371 DEBUG   SenderThread:1316 [sender.py:send():303] send: summary
+2022-10-09 14:35:09,380 INFO    SenderThread:1316 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 14:35:09,655 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/wandb-summary.json
+2022-10-09 14:35:09,656 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:10,658 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:11,660 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:13,665 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:15,670 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:17,674 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:19,679 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:20,072 DEBUG   SenderThread:1316 [sender.py:send():303] send: stats
+2022-10-09 14:35:21,679 DEBUG   SenderThread:1316 [sender.py:send():303] send: exit
+2022-10-09 14:35:21,680 INFO    SenderThread:1316 [sender.py:send_exit():442] handling exit code: 0
+2022-10-09 14:35:21,680 INFO    SenderThread:1316 [sender.py:send_exit():444] handling runtime: 90
+2022-10-09 14:35:21,688 INFO    SenderThread:1316 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 14:35:21,691 INFO    SenderThread:1316 [sender.py:send_exit():450] send defer
+2022-10-09 14:35:21,692 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 14:35:21,693 INFO    HandlerThread:1316 [handler.py:handle_request_defer():161] handle defer: 0
+2022-10-09 14:35:21,694 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: defer
+2022-10-09 14:35:21,695 INFO    SenderThread:1316 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-10-09 14:35:21,695 INFO    SenderThread:1316 [sender.py:transition_state():463] send defer: 1
+2022-10-09 14:35:21,696 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/wandb-summary.json
+2022-10-09 14:35:21,696 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 14:35:21,697 INFO    HandlerThread:1316 [handler.py:handle_request_defer():161] handle defer: 1
+2022-10-09 14:35:21,698 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:21,779 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: defer
+2022-10-09 14:35:21,780 INFO    SenderThread:1316 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-10-09 14:35:21,780 INFO    SenderThread:1316 [sender.py:transition_state():463] send defer: 2
+2022-10-09 14:35:21,780 DEBUG   SenderThread:1316 [sender.py:send():303] send: stats
+2022-10-09 14:35:21,781 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 14:35:21,782 INFO    HandlerThread:1316 [handler.py:handle_request_defer():161] handle defer: 2
+2022-10-09 14:35:21,783 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: defer
+2022-10-09 14:35:21,783 INFO    SenderThread:1316 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-10-09 14:35:21,783 INFO    SenderThread:1316 [sender.py:transition_state():463] send defer: 3
+2022-10-09 14:35:21,784 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 14:35:21,784 INFO    HandlerThread:1316 [handler.py:handle_request_defer():161] handle defer: 3
+2022-10-09 14:35:21,785 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: defer
+2022-10-09 14:35:21,785 INFO    SenderThread:1316 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-10-09 14:35:21,786 INFO    SenderThread:1316 [sender.py:transition_state():463] send defer: 4
+2022-10-09 14:35:21,786 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 14:35:21,787 INFO    HandlerThread:1316 [handler.py:handle_request_defer():161] handle defer: 4
+2022-10-09 14:35:21,788 DEBUG   SenderThread:1316 [sender.py:send():303] send: summary
+2022-10-09 14:35:21,794 INFO    SenderThread:1316 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 14:35:21,797 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: defer
+2022-10-09 14:35:21,797 INFO    SenderThread:1316 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-10-09 14:35:21,798 INFO    SenderThread:1316 [sender.py:transition_state():463] send defer: 5
+2022-10-09 14:35:21,798 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 14:35:21,799 INFO    HandlerThread:1316 [handler.py:handle_request_defer():161] handle defer: 5
+2022-10-09 14:35:21,799 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: defer
+2022-10-09 14:35:21,799 INFO    SenderThread:1316 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-10-09 14:35:21,800 INFO    SenderThread:1316 [sender.py:transition_state():463] send defer: 6
+2022-10-09 14:35:21,800 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 14:35:21,800 INFO    HandlerThread:1316 [handler.py:handle_request_defer():161] handle defer: 6
+2022-10-09 14:35:21,801 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: defer
+2022-10-09 14:35:21,801 INFO    SenderThread:1316 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-10-09 14:35:22,680 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: poll_exit
+2022-10-09 14:35:22,698 INFO    Thread-13 :1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:23,311 INFO    SenderThread:1316 [sender.py:transition_state():463] send defer: 7
+2022-10-09 14:35:23,313 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: poll_exit
+2022-10-09 14:35:23,313 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 14:35:23,314 INFO    HandlerThread:1316 [handler.py:handle_request_defer():161] handle defer: 7
+2022-10-09 14:35:23,315 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: defer
+2022-10-09 14:35:23,315 INFO    SenderThread:1316 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-10-09 14:35:23,315 INFO    SenderThread:1316 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-10-09 14:35:23,681 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: poll_exit
+2022-10-09 14:35:23,702 INFO    SenderThread:1316 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:23,704 INFO    SenderThread:1316 [dir_watcher.py:finish():392] scan: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files
+2022-10-09 14:35:23,707 INFO    SenderThread:1316 [dir_watcher.py:finish():406] scan save: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/config.yaml config.yaml
+2022-10-09 14:35:23,711 INFO    SenderThread:1316 [dir_watcher.py:finish():406] scan save: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/wandb-summary.json wandb-summary.json
+2022-10-09 14:35:23,719 INFO    SenderThread:1316 [dir_watcher.py:finish():406] scan save: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/requirements.txt requirements.txt
+2022-10-09 14:35:23,734 INFO    SenderThread:1316 [dir_watcher.py:finish():406] scan save: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/wandb-metadata.json wandb-metadata.json
+2022-10-09 14:35:23,734 INFO    SenderThread:1316 [dir_watcher.py:finish():406] scan save: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log output.log
+2022-10-09 14:35:23,744 INFO    SenderThread:1316 [sender.py:transition_state():463] send defer: 8
+2022-10-09 14:35:23,745 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: poll_exit
+2022-10-09 14:35:23,745 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 14:35:23,746 INFO    HandlerThread:1316 [handler.py:handle_request_defer():161] handle defer: 8
+2022-10-09 14:35:23,748 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: defer
+2022-10-09 14:35:23,753 INFO    SenderThread:1316 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-10-09 14:35:23,754 INFO    SenderThread:1316 [file_pusher.py:finish():168] shutting down file pusher
+2022-10-09 14:35:24,373 INFO    Thread-18 :1316 [upload_job.py:push():143] Uploaded file /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/config.yaml
+2022-10-09 14:35:24,401 INFO    Thread-19 :1316 [upload_job.py:push():143] Uploaded file /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/wandb-summary.json
+2022-10-09 14:35:24,403 INFO    Thread-20 :1316 [upload_job.py:push():143] Uploaded file /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/requirements.txt
+2022-10-09 14:35:24,410 INFO    Thread-21 :1316 [upload_job.py:push():143] Uploaded file /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/files/output.log
+2022-10-09 14:35:24,611 INFO    Thread-12 :1316 [sender.py:transition_state():463] send defer: 9
+2022-10-09 14:35:24,612 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 14:35:24,612 INFO    HandlerThread:1316 [handler.py:handle_request_defer():161] handle defer: 9
+2022-10-09 14:35:24,613 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: defer
+2022-10-09 14:35:24,614 INFO    SenderThread:1316 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-10-09 14:35:24,614 INFO    SenderThread:1316 [file_pusher.py:join():173] waiting for file pusher
+2022-10-09 14:35:24,614 INFO    SenderThread:1316 [sender.py:transition_state():463] send defer: 10
+2022-10-09 14:35:24,615 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 14:35:24,616 INFO    HandlerThread:1316 [handler.py:handle_request_defer():161] handle defer: 10
+2022-10-09 14:35:24,617 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: defer
+2022-10-09 14:35:24,617 INFO    SenderThread:1316 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-10-09 14:35:24,682 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: poll_exit
+2022-10-09 14:35:25,327 INFO    SenderThread:1316 [sender.py:transition_state():463] send defer: 11
+2022-10-09 14:35:25,327 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: poll_exit
+2022-10-09 14:35:25,328 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 14:35:25,329 INFO    HandlerThread:1316 [handler.py:handle_request_defer():161] handle defer: 11
+2022-10-09 14:35:25,329 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: defer
+2022-10-09 14:35:25,330 INFO    SenderThread:1316 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-10-09 14:35:25,331 INFO    SenderThread:1316 [sender.py:transition_state():463] send defer: 12
+2022-10-09 14:35:25,331 DEBUG   SenderThread:1316 [sender.py:send():303] send: final
+2022-10-09 14:35:25,332 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 14:35:25,332 INFO    HandlerThread:1316 [handler.py:handle_request_defer():161] handle defer: 12
+2022-10-09 14:35:25,332 DEBUG   SenderThread:1316 [sender.py:send():303] send: footer
+2022-10-09 14:35:25,334 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: defer
+2022-10-09 14:35:25,334 INFO    SenderThread:1316 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-10-09 14:35:25,335 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: poll_exit
+2022-10-09 14:35:25,337 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: poll_exit
+2022-10-09 14:35:25,337 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: server_info
+2022-10-09 14:35:25,338 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: get_summary
+2022-10-09 14:35:25,337 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: poll_exit
+2022-10-09 14:35:25,340 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: poll_exit
+2022-10-09 14:35:25,341 DEBUG   SenderThread:1316 [sender.py:send_request():317] send_request: server_info
+2022-10-09 14:35:25,339 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: sampled_history
+2022-10-09 14:35:25,816 INFO    MainThread:1316 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2022-10-09 14:35:25,816 INFO    MainThread:1316 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2022-10-09 14:35:25,817 INFO    MainThread:1316 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2022-10-09 14:35:25,818 DEBUG   HandlerThread:1316 [handler.py:handle_request():138] handle_request: shutdown
+2022-10-09 14:35:25,818 INFO    HandlerThread:1316 [handler.py:finish():814] shutting down handler
+2022-10-09 14:35:26,331 INFO    WriterThread:1316 [datastore.py:close():279] close: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_143350-1ao6d67a/run-1ao6d67a.wandb
+2022-10-09 14:35:26,815 INFO    SenderThread:1316 [sender.py:finish():1331] shutting down sender
+2022-10-09 14:35:26,816 INFO    SenderThread:1316 [file_pusher.py:finish():168] shutting down file pusher
+2022-10-09 14:35:26,816 INFO    SenderThread:1316 [file_pusher.py:join():173] waiting for file pusher
+2022-10-09 14:35:26,822 INFO    MainThread:1316 [internal.py:handle_exit():78] Internal process exited

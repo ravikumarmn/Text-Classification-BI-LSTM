@@ -1,0 +1,205 @@
+2022-10-09 18:14:20,313 INFO    StreamThr :3450 [internal.py:wandb_internal():91] W&B internal server running at pid: 3450, started at: 2022-10-09 18:14:20.309448
+2022-10-09 18:14:20,319 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: status
+2022-10-09 18:14:20,327 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: status
+2022-10-09 18:14:20,335 DEBUG   SenderThread:3450 [sender.py:send():303] send: header
+2022-10-09 18:14:20,335 INFO    WriterThread:3450 [datastore.py:open_for_write():75] open: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/run-dwfnsv5v.wandb
+2022-10-09 18:14:20,351 DEBUG   SenderThread:3450 [sender.py:send():303] send: run
+2022-10-09 18:14:20,872 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: check_version
+2022-10-09 18:14:20,879 INFO    SenderThread:3450 [dir_watcher.py:__init__():216] watching files in: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files
+2022-10-09 18:14:20,879 INFO    SenderThread:3450 [sender.py:_start_run_threads():931] run started: dwfnsv5v with start time 1665339260.329636
+2022-10-09 18:14:20,880 DEBUG   SenderThread:3450 [sender.py:send():303] send: summary
+2022-10-09 18:14:20,889 INFO    SenderThread:3450 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 18:14:20,893 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: check_version
+2022-10-09 18:14:20,946 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: run_start
+2022-10-09 18:14:20,950 DEBUG   HandlerThread:3450 [meta.py:__init__():34] meta init
+2022-10-09 18:14:20,950 DEBUG   HandlerThread:3450 [meta.py:__init__():49] meta init done
+2022-10-09 18:14:20,951 DEBUG   HandlerThread:3450 [meta.py:probe():215] probe
+2022-10-09 18:14:20,972 DEBUG   HandlerThread:3450 [git.py:repo():40] git repository is invalid
+2022-10-09 18:14:20,973 DEBUG   HandlerThread:3450 [meta.py:_save_pip():53] save pip
+2022-10-09 18:14:20,981 DEBUG   HandlerThread:3450 [meta.py:_save_pip():67] save pip done
+2022-10-09 18:14:20,983 DEBUG   HandlerThread:3450 [meta.py:probe():253] probe done
+2022-10-09 18:14:21,089 DEBUG   SenderThread:3450 [sender.py:send():303] send: files
+2022-10-09 18:14:21,090 INFO    SenderThread:3450 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-10-09 18:14:21,113 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-09 18:14:21,115 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: stop_status
+2022-10-09 18:14:21,359 DEBUG   SenderThread:3450 [sender.py:send():303] send: telemetry
+2022-10-09 18:14:21,765 INFO    Thread-17 :3450 [upload_job.py:push():143] Uploaded file /tmp/tmpv6wlig67wandb/1p2cbo8n-wandb-metadata.json
+2022-10-09 18:14:21,884 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_created():275] file/dir created: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/wandb-metadata.json
+2022-10-09 18:14:21,886 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_created():275] file/dir created: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/requirements.txt
+2022-10-09 18:14:21,889 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_created():275] file/dir created: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/wandb-summary.json
+2022-10-09 18:14:25,894 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_created():275] file/dir created: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:29,904 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:31,909 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:33,914 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:35,920 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:36,364 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-09 18:14:36,365 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: stop_status
+2022-10-09 18:14:37,925 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:38,284 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: partial_history
+2022-10-09 18:14:38,287 DEBUG   SenderThread:3450 [sender.py:send():303] send: history
+2022-10-09 18:14:38,288 DEBUG   SenderThread:3450 [sender.py:send():303] send: summary
+2022-10-09 18:14:38,310 INFO    SenderThread:3450 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 18:14:38,928 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/wandb-summary.json
+2022-10-09 18:14:39,930 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:40,932 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:41,934 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:43,939 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:45,945 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:47,950 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:49,180 DEBUG   SenderThread:3450 [sender.py:send():303] send: stats
+2022-10-09 18:14:49,955 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:50,958 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/config.yaml
+2022-10-09 18:14:51,118 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: partial_history
+2022-10-09 18:14:51,133 DEBUG   SenderThread:3450 [sender.py:send():303] send: history
+2022-10-09 18:14:51,134 DEBUG   SenderThread:3450 [sender.py:send():303] send: summary
+2022-10-09 18:14:51,147 INFO    SenderThread:3450 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 18:14:51,607 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-09 18:14:51,608 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: stop_status
+2022-10-09 18:14:51,960 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:51,961 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/wandb-summary.json
+2022-10-09 18:14:52,964 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:53,966 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:55,972 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:57,976 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:14:59,991 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:02,001 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:03,862 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: partial_history
+2022-10-09 18:15:03,865 DEBUG   SenderThread:3450 [sender.py:send():303] send: history
+2022-10-09 18:15:03,866 DEBUG   SenderThread:3450 [sender.py:send():303] send: summary
+2022-10-09 18:15:03,875 INFO    SenderThread:3450 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 18:15:04,005 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:04,008 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/wandb-summary.json
+2022-10-09 18:15:06,010 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:06,852 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-09 18:15:06,853 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: stop_status
+2022-10-09 18:15:07,012 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:08,015 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:10,020 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:12,025 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:14,031 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:16,036 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:16,555 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: partial_history
+2022-10-09 18:15:16,558 DEBUG   SenderThread:3450 [sender.py:send():303] send: history
+2022-10-09 18:15:16,558 DEBUG   SenderThread:3450 [sender.py:send():303] send: summary
+2022-10-09 18:15:16,570 INFO    SenderThread:3450 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 18:15:17,038 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/wandb-summary.json
+2022-10-09 18:15:18,041 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:19,043 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:19,480 DEBUG   SenderThread:3450 [sender.py:send():303] send: stats
+2022-10-09 18:15:20,046 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:22,051 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:22,095 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-09 18:15:22,096 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: stop_status
+2022-10-09 18:15:24,055 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:26,060 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:28,065 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:29,353 DEBUG   SenderThread:3450 [sender.py:send():303] send: exit
+2022-10-09 18:15:29,353 INFO    SenderThread:3450 [sender.py:send_exit():442] handling exit code: 0
+2022-10-09 18:15:29,354 INFO    SenderThread:3450 [sender.py:send_exit():444] handling runtime: 68
+2022-10-09 18:15:29,362 INFO    SenderThread:3450 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 18:15:29,365 INFO    SenderThread:3450 [sender.py:send_exit():450] send defer
+2022-10-09 18:15:29,366 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 18:15:29,367 INFO    HandlerThread:3450 [handler.py:handle_request_defer():161] handle defer: 0
+2022-10-09 18:15:29,368 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: defer
+2022-10-09 18:15:29,368 INFO    SenderThread:3450 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-10-09 18:15:29,369 INFO    SenderThread:3450 [sender.py:transition_state():463] send defer: 1
+2022-10-09 18:15:29,369 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 18:15:29,370 INFO    HandlerThread:3450 [handler.py:handle_request_defer():161] handle defer: 1
+2022-10-09 18:15:29,466 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: defer
+2022-10-09 18:15:29,467 INFO    SenderThread:3450 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-10-09 18:15:29,467 INFO    SenderThread:3450 [sender.py:transition_state():463] send defer: 2
+2022-10-09 18:15:29,468 DEBUG   SenderThread:3450 [sender.py:send():303] send: stats
+2022-10-09 18:15:29,468 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 18:15:29,469 INFO    HandlerThread:3450 [handler.py:handle_request_defer():161] handle defer: 2
+2022-10-09 18:15:29,470 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: defer
+2022-10-09 18:15:29,470 INFO    SenderThread:3450 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-10-09 18:15:29,470 INFO    SenderThread:3450 [sender.py:transition_state():463] send defer: 3
+2022-10-09 18:15:29,471 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 18:15:29,471 INFO    HandlerThread:3450 [handler.py:handle_request_defer():161] handle defer: 3
+2022-10-09 18:15:29,472 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: defer
+2022-10-09 18:15:29,473 INFO    SenderThread:3450 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-10-09 18:15:29,473 INFO    SenderThread:3450 [sender.py:transition_state():463] send defer: 4
+2022-10-09 18:15:29,474 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 18:15:29,475 INFO    HandlerThread:3450 [handler.py:handle_request_defer():161] handle defer: 4
+2022-10-09 18:15:29,475 DEBUG   SenderThread:3450 [sender.py:send():303] send: summary
+2022-10-09 18:15:29,482 INFO    SenderThread:3450 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-09 18:15:29,486 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: defer
+2022-10-09 18:15:29,486 INFO    SenderThread:3450 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-10-09 18:15:29,487 INFO    SenderThread:3450 [sender.py:transition_state():463] send defer: 5
+2022-10-09 18:15:29,488 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 18:15:29,489 INFO    HandlerThread:3450 [handler.py:handle_request_defer():161] handle defer: 5
+2022-10-09 18:15:29,489 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: defer
+2022-10-09 18:15:29,490 INFO    SenderThread:3450 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-10-09 18:15:29,491 INFO    SenderThread:3450 [sender.py:transition_state():463] send defer: 6
+2022-10-09 18:15:29,492 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 18:15:29,493 INFO    HandlerThread:3450 [handler.py:handle_request_defer():161] handle defer: 6
+2022-10-09 18:15:29,493 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: defer
+2022-10-09 18:15:29,493 INFO    SenderThread:3450 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-10-09 18:15:30,071 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:30,072 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/wandb-summary.json
+2022-10-09 18:15:30,354 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: poll_exit
+2022-10-09 18:15:31,073 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:32,076 INFO    Thread-13 :3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:32,365 INFO    SenderThread:3450 [sender.py:transition_state():463] send defer: 7
+2022-10-09 18:15:32,366 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: poll_exit
+2022-10-09 18:15:32,367 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 18:15:32,368 INFO    HandlerThread:3450 [handler.py:handle_request_defer():161] handle defer: 7
+2022-10-09 18:15:32,368 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: defer
+2022-10-09 18:15:32,369 INFO    SenderThread:3450 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-10-09 18:15:32,369 INFO    SenderThread:3450 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-10-09 18:15:33,081 INFO    SenderThread:3450 [dir_watcher.py:_on_file_modified():292] file/dir modified: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:33,083 INFO    SenderThread:3450 [dir_watcher.py:finish():392] scan: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files
+2022-10-09 18:15:33,085 INFO    SenderThread:3450 [dir_watcher.py:finish():406] scan save: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/config.yaml config.yaml
+2022-10-09 18:15:33,090 INFO    SenderThread:3450 [dir_watcher.py:finish():406] scan save: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/wandb-summary.json wandb-summary.json
+2022-10-09 18:15:33,097 INFO    SenderThread:3450 [dir_watcher.py:finish():406] scan save: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/requirements.txt requirements.txt
+2022-10-09 18:15:33,102 INFO    SenderThread:3450 [dir_watcher.py:finish():406] scan save: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/wandb-metadata.json wandb-metadata.json
+2022-10-09 18:15:33,103 INFO    SenderThread:3450 [dir_watcher.py:finish():406] scan save: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log output.log
+2022-10-09 18:15:33,120 INFO    SenderThread:3450 [sender.py:transition_state():463] send defer: 8
+2022-10-09 18:15:33,121 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 18:15:33,127 INFO    HandlerThread:3450 [handler.py:handle_request_defer():161] handle defer: 8
+2022-10-09 18:15:33,127 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: defer
+2022-10-09 18:15:33,130 INFO    SenderThread:3450 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-10-09 18:15:33,131 INFO    SenderThread:3450 [file_pusher.py:finish():168] shutting down file pusher
+2022-10-09 18:15:33,785 INFO    Thread-19 :3450 [upload_job.py:push():143] Uploaded file /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/wandb-summary.json
+2022-10-09 18:15:33,785 INFO    Thread-21 :3450 [upload_job.py:push():143] Uploaded file /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/output.log
+2022-10-09 18:15:33,883 INFO    Thread-20 :3450 [upload_job.py:push():143] Uploaded file /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/requirements.txt
+2022-10-09 18:15:34,017 INFO    Thread-18 :3450 [upload_job.py:push():143] Uploaded file /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/files/config.yaml
+2022-10-09 18:15:34,218 INFO    Thread-12 :3450 [sender.py:transition_state():463] send defer: 9
+2022-10-09 18:15:34,219 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 18:15:34,219 INFO    HandlerThread:3450 [handler.py:handle_request_defer():161] handle defer: 9
+2022-10-09 18:15:34,220 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: defer
+2022-10-09 18:15:34,221 INFO    SenderThread:3450 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-10-09 18:15:34,221 INFO    SenderThread:3450 [file_pusher.py:join():173] waiting for file pusher
+2022-10-09 18:15:34,222 INFO    SenderThread:3450 [sender.py:transition_state():463] send defer: 10
+2022-10-09 18:15:34,223 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 18:15:34,223 INFO    HandlerThread:3450 [handler.py:handle_request_defer():161] handle defer: 10
+2022-10-09 18:15:34,224 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: defer
+2022-10-09 18:15:34,225 INFO    SenderThread:3450 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-10-09 18:15:34,932 INFO    SenderThread:3450 [sender.py:transition_state():463] send defer: 11
+2022-10-09 18:15:34,933 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 18:15:34,933 INFO    HandlerThread:3450 [handler.py:handle_request_defer():161] handle defer: 11
+2022-10-09 18:15:34,934 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: defer
+2022-10-09 18:15:34,934 INFO    SenderThread:3450 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-10-09 18:15:34,935 INFO    SenderThread:3450 [sender.py:transition_state():463] send defer: 12
+2022-10-09 18:15:34,936 DEBUG   SenderThread:3450 [sender.py:send():303] send: final
+2022-10-09 18:15:34,936 DEBUG   SenderThread:3450 [sender.py:send():303] send: footer
+2022-10-09 18:15:34,936 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: defer
+2022-10-09 18:15:34,937 INFO    HandlerThread:3450 [handler.py:handle_request_defer():161] handle defer: 12
+2022-10-09 18:15:34,937 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: defer
+2022-10-09 18:15:34,938 INFO    SenderThread:3450 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-10-09 18:15:34,940 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: poll_exit
+2022-10-09 18:15:34,940 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: poll_exit
+2022-10-09 18:15:34,940 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: server_info
+2022-10-09 18:15:34,942 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: get_summary
+2022-10-09 18:15:34,942 DEBUG   SenderThread:3450 [sender.py:send_request():317] send_request: server_info
+2022-10-09 18:15:34,943 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: sampled_history
+2022-10-09 18:15:35,431 INFO    MainThread:3450 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2022-10-09 18:15:35,431 INFO    MainThread:3450 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2022-10-09 18:15:35,433 INFO    MainThread:3450 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2022-10-09 18:15:35,435 DEBUG   HandlerThread:3450 [handler.py:handle_request():138] handle_request: shutdown
+2022-10-09 18:15:35,435 INFO    HandlerThread:3450 [handler.py:finish():814] shutting down handler
+2022-10-09 18:15:35,936 INFO    WriterThread:3450 [datastore.py:close():279] close: /content/drive/MyDrive/binary_classification/text_classification/src/wandb/run-20221009_181420-dwfnsv5v/run-dwfnsv5v.wandb
+2022-10-09 18:15:36,431 INFO    SenderThread:3450 [sender.py:finish():1331] shutting down sender
+2022-10-09 18:15:36,431 INFO    SenderThread:3450 [file_pusher.py:finish():168] shutting down file pusher
+2022-10-09 18:15:36,432 INFO    SenderThread:3450 [file_pusher.py:join():173] waiting for file pusher
+2022-10-09 18:15:36,437 INFO    MainThread:3450 [internal.py:handle_exit():78] Internal process exited

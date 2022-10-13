@@ -1,0 +1,14 @@
+
+Using device : gpu
+Traceback (most recent call last):
+  File "train.py", line 135, in <module>
+    model,test_dataloader = main(params)
+  File "train.py", line 122, in main
+    model = train_fn(my_model,config["EPOCHS"],config["device"],train_dataloader,test_dataloader,criterion,optimizer,config)
+  File "train.py", line 66, in train_fn
+    epoch_train_loss,train_preds = train(model,params,train_dataloader,optimizer,criterion)
+  File "train.py", line 20, in train
+    model.to(params['device'])
+  File "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py", line 908, in to
+    device, dtype, non_blocking, convert_to_format = torch._C._nn._parse_to(*args, **kwargs)
+RuntimeError: Expected one of cpu, cuda, ipu, xpu, mkldnn, opengl, opencl, ideep, hip, ve, ort, mps, xla, lazy, vulkan, meta, hpu, privateuseone device type at start of device string: gpu

@@ -1,0 +1,16 @@
+{
+    "os": "Linux-5.10.133+-x86_64-with-Ubuntu-18.04-bionic",
+    "python": "3.7.14",
+    "heartbeatAt": "2022-10-08T21:00:01.650201",
+    "startedAt": "2022-10-08T21:00:01.071934",
+    "docker": null,
+    "cpu_count": 2,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "host": "e92786b4139e",
+    "username": "root",
+    "executable": "/usr/bin/python3"
+}

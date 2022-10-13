@@ -1,0 +1,18 @@
+{
+    "os": "Linux-5.10.133+-x86_64-with-Ubuntu-18.04-bionic",
+    "python": "3.7.14",
+    "heartbeatAt": "2022-10-09T18:14:20.951723",
+    "startedAt": "2022-10-09T18:14:20.192068",
+    "docker": null,
+    "gpu": "Tesla T4",
+    "gpu_count": 1,
+    "cpu_count": 2,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "host": "f22b878243d0",
+    "username": "root",
+    "executable": "/usr/bin/python3"
+}

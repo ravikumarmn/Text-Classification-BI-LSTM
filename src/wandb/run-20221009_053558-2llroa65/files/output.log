@@ -1,0 +1,24 @@
+
+Using device : cuda
+Traceback (most recent call last):
+  File "train.py", line 135, in <module>
+    model,test_dataloader = main(params)
+  File "train.py", line 122, in main
+    model = train_fn(my_model,config["EPOCHS"],config["device"],train_dataloader,test_dataloader,criterion,optimizer,config)
+  File "train.py", line 66, in train_fn
+    epoch_train_loss,train_preds = train(model,params,train_dataloader,optimizer,criterion)
+  File "train.py", line 20, in train
+    model.to(params['device'])
+  File "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py", line 927, in to
+    return self._apply(convert)
+  File "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/module.py", line 579, in _apply
+    module._apply(fn)
+  File "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/rnn.py", line 189, in _apply
+    self.flatten_parameters()
+  File "/usr/local/lib/python3.7/dist-packages/torch/nn/modules/rnn.py", line 154, in flatten_parameters
+    not torch.backends.cudnn.is_acceptable(fw.data)):
+  File "/usr/local/lib/python3.7/dist-packages/torch/backends/cudnn/__init__.py", line 95, in is_acceptable
+    if not _init():
+  File "/usr/local/lib/python3.7/dist-packages/torch/backends/cudnn/__init__.py", line 25, in _init
+    __cudnn_version = _cudnn.getVersionInt()
+KeyboardInterrupt

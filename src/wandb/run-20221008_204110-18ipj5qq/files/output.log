@@ -1,0 +1,84 @@
+Epoch:   0%|                                                                                      | 0/100 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Train: 100%|████████████████████████████████████████████████████████████████████████████| 279/279 [01:25<00:00,  3.12it/s]
+
+Epoch:   1%|▊                                                                           | 1/100 [01:29<2:27:06, 89.16s/it]
+Train:   0%|▎                                                                             | 1/279 [00:00<01:45,  2.65it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Traceback (most recent call last):
+  File "train.py", line 134, in <module>
+    model,test_dataloader = main(params)
+  File "train.py", line 121, in main
+    model = train_fn(my_model,config["EPOCHS"],config["device"],train_dataloader,test_dataloader,criterion,optimizer,config)
+  File "train.py", line 66, in train_fn
+    epoch_train_loss,train_preds = train(model,params,train_dataloader,optimizer,criterion)
+  File "train.py", line 34, in train
+    loss.backward()
+  File "/usr/local/lib/python3.7/dist-packages/torch/_tensor.py", line 396, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/usr/local/lib/python3.7/dist-packages/torch/autograd/__init__.py", line 175, in backward
+    allow_unreachable=True, accumulate_grad=True)  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
