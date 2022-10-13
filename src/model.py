@@ -19,7 +19,7 @@ class ClassifierModel(nn.Module):
     self.linear1  = nn.Linear(hidden_size*2,hidden_size)
     self.linear2 = nn.Linear(hidden_size,out_hidden)
     self.linear3 = nn.Linear(out_hidden,n_labels)
-    # self.reduce_embed = nn.Linear(100,embedding_dim)
+    # self.reduce_embed = nn.Lingear(100,embedding_dim)
     self.sigmoid = nn.Sigmoid()
     self.dropout1 = nn.Dropout(0.5)
     self.dropout2 = nn.Dropout(0.5)
