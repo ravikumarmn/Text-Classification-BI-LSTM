@@ -123,7 +123,7 @@ if __name__ == '__main__':
             notes = "taking mean of all hidden state, bidirectional lstm, loss reduction is sum",
             tags = ['baseline',"lstm","loss_sum"],
             config=params,
-            mode = 'disabled')
+            mode = 'online')
 
     model,test_dataloader = main(params)
 

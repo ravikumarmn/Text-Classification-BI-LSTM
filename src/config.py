@@ -1,5 +1,5 @@
 runtime_name = "base_bidi_lstm_seq_hidden_mean_loss_sum_added_layer_dropout_0.5_relu_w2v_pre_trained_embedding"
-device = 'cuda'
+device = 'cpu'
 
 base_dir = "/content/drive/MyDrive/binary_classification/text_classification/"
 file_name = "dataset/train.tsv"
