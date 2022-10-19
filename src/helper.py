@@ -15,11 +15,11 @@ def read_csv(base_dir,file_name,input_column,target_columns):
   return dataset
 
 def preprocess_text(text):
-    text = re.sub(r"^[A-Za-z]","",text)
-    text = " ".join([x for x in text.split() if x not in sw])
-    text = " ".join([wordnet_lemmatizer.lemmatize(x) for x in text.split() ])
+    text = re.sub(r"[^A-Za-z]"," ",text).strip()
+    # text = " ".join([x for x in text.split() if x not in sw])
+    # text = " ".join([wordnet_lemmatizer.lemmatize(x) for x in text.split() ])
     # # text = " ".join([porter_stemmer.stem(x) for x in text.split()])
-    text = re.sub(r'[^\w\s]', '', text)
+    text = re.sub(r"[^\w\s]", '', text).strip()
     text = text.lower()
     return text
 

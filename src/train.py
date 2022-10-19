@@ -14,7 +14,9 @@ import json
 import inference
 import wandb 
 import numpy as np
-
+import pandas as pd
+import seaborn as sn
+import matplotlib.pyplot as plt
 
 def score(y_true,y_pred):
     tp = (y_true * y_pred).sum().to(torch.float32).item()
@@ -106,7 +108,8 @@ def evaluate(model,device,test_dataloader,criterion):
     true_n = 0
     false_p = 0
     false_n = 0
-
+    all_pred = list()
+    all_true = list()
     with torch.no_grad():
         for batch_index,data in tqdm_obj_val_loader:
             data = {k:v.to(device) for k, v in data.items()}
@@ -125,6 +128,8 @@ def evaluate(model,device,test_dataloader,criterion):
             true_n += tn
             false_n += fp
             false_n += fn
+            all_pred.extend(y_pred.tolist())
+            all_true.extend(y_true.tolist())
 
             test_preds.extend(preds_bool.int().tolist())
         epsilon = 1e-7
@@ -132,7 +137,7 @@ def evaluate(model,device,test_dataloader,criterion):
         precision = true_p/(true_p + false_p +epsilon)
         recall = true_p /(true_p + false_n+epsilon)
         f1_score = (2 * recall * precision)/(recall + precision +epsilon)
-        return sum(test_loss)/len(test_loss),sum(test_preds)/len(test_preds),precision,recall,f1_score
+        return sum(test_loss)/len(test_loss),sum(test_preds)/len(test_preds),precision,recall,f1_score,np.array(all_pred),np.array(all_true)
 
 def train_fn(model,train_dataloader,test_dataloader,criterion,optimizer,params):
     tqdm_obj_epoch = tqdm(range(params["EPOCHS"]),total = params["EPOCHS"],leave = False)
@@ -141,8 +146,14 @@ def train_fn(model,train_dataloader,test_dataloader,criterion,optimizer,params):
 
     for epoch in tqdm_obj_epoch:
         training_loss,training_accuracy,correct_true,target_true,predicted_true,precision,recall,f1_score = train(model,params["device"],train_dataloader,optimizer,criterion)
-        validation_loss,validation_accuracy,precision,recall,f1_score = evaluate(model,params["device"],test_dataloader,criterion)
-    
+        validation_loss,validation_accuracy,precision,recall,f1_score,all_pred,all_true = evaluate(model,params["device"],test_dataloader,criterion)
+        tp = (all_true * all_pred).sum()
+        tn = ((1-all_true) * (1 - all_pred)).sum()
+        fp = ((1-all_true) * all_pred).sum()
+        fn = (all_true * (1- all_pred)).sum()
+        confusion_mat = [[tp,fp],[fn,tn]]
+
+        x,y = np.array(confusion_mat).shape
         if validation_loss < val_loss:
             val_loss = validation_loss
 
@@ -156,6 +167,14 @@ def train_fn(model,train_dataloader,test_dataloader,criterion,optimizer,params):
         else:
             early_stopping += 1
         if early_stopping == params["patience"]:
+            df_cm = pd.DataFrame(confusion_mat, range(x), range(y))
+            # df_norm_col=(df_cm-df_cm.mean())/df_cm.std()
+            ax = plt.axes()
+            sn.set(font_scale=1.4) # for label size
+            
+            sn.heatmap(df_cm, annot=True, annot_kws={"size": 16},) # font size
+            ax.set_title('Confusion matrix of the classifier')
+            plt.savefig('/content/drive/MyDrive/DL_projects/text_classification/confusion_matrix1.jpg')
             print("Early stopping")
             break
             
@@ -203,7 +222,7 @@ if __name__ == '__main__':
             notes = "taking mean of all hidden state, bidirectional lstm, loss reduction is sum,added recall,precision,f1_score",
             tags = ['baseline',"lstm","loss_sum"],
             config=params,
-            mode = 'online')
+            mode = 'disabled')
 
     model,test_dataloader = main(params)
 

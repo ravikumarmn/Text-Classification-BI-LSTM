@@ -1,5 +1,5 @@
 runtime_name = "base_bidi_lstm_seq_hidden_mean_loss_sum_added_layer_dropout_0.5_relu_imdb_prep_w2v_pre_trained_embedding,added_metrics"
-device = 'cuda'
+device = 'cpu'
 
 base_dir = "/content/drive/MyDrive/DL_projects/text_classification/"
 file_name = "dataset/imdb_dataset.csv"
@@ -18,7 +18,7 @@ input_column = ["review"]
 max_seq_len = 500
 BATCH_SIZE = 16
 LEARNING_RATE = 0.001
-EPOCHS = 5
+EPOCHS = 100
 
 EMBED_SIZE = 32
 HIDDEN_SIZE = 32
