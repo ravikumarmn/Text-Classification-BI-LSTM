@@ -1,10 +1,10 @@
-runtime_name = "base_bidi_lstm_seq_hidden_mean_loss_sum_added_layer_dropout_0.5_relu_imdb_prep_w2v_pre_trained_embedding,added_metrics"
+runtime_name = "2base_bidi_lstm_seq_hidden_mean_loss_sum_added_layer_dropout_0.5_relu_imdb_prep_w2v_pre_trained_embedding,added_metrics"
 device = 'cpu'
 
 base_dir = "/content/drive/MyDrive/DL_projects/text_classification/"
 file_name = "dataset/imdb_dataset.csv"
 
-mapping = {"positive" : 1,"negative":0}
+mapping = {"negative":0,"positive" : 1}
 vocab_file_name = "dataset/vocab.json"
 save_checkpoint_dir = base_dir + "trained_models/"
 train_test_data = "dataset/imdb_train_test_vocabed.pkl"#"dataset/train_test_vocabed.pkl"

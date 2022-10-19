@@ -147,6 +147,7 @@ def train_fn(model,train_dataloader,test_dataloader,criterion,optimizer,params):
     for epoch in tqdm_obj_epoch:
         training_loss,training_accuracy,correct_true,target_true,predicted_true,precision,recall,f1_score = train(model,params["device"],train_dataloader,optimizer,criterion)
         validation_loss,validation_accuracy,precision,recall,f1_score,all_pred,all_true = evaluate(model,params["device"],test_dataloader,criterion)
+        
         tp = (all_true * all_pred).sum()
         tn = ((1-all_true) * (1 - all_pred)).sum()
         fp = ((1-all_true) * all_pred).sum()
@@ -194,8 +195,15 @@ def train_fn(model,train_dataloader,test_dataloader,criterion,optimizer,params):
 
             "epoch/recall" : recall,
             "epoch/precision" : precision,
-            "epoch/f1_score" : f1_score
+            "epoch/f1_score" : f1_score,
+            "epoch/confu_matrix" : wandb.plot.confusion_matrix(
+                probs=None,
+                preds = all_pred.astype(int),
+                y_true=all_true.astype(int),
+                class_names= list(params['mapping'].keys())
+            )
         })
+        
     return model
 
 def main(config):
@@ -219,10 +227,10 @@ if __name__ == '__main__':
     print("Params :",params,sep="\n")
     wandb.init(project='text_classifier',
             name = params["runtime_name"] + f'_seq2seq_hidden_{params["HIDDEN_SIZE"]}_embed_{params["EMBED_SIZE"]}',
-            notes = "taking mean of all hidden state, bidirectional lstm, loss reduction is sum,added recall,precision,f1_score",
+            notes = "taking mean of all hidden state, bidirectional lstm, loss reduction is sum,added recall,precision,f1_score,confu_matrix",
             tags = ['baseline',"lstm","loss_sum"],
             config=params,
-            mode = 'disabled')
+            mode = 'online')
 
     model,test_dataloader = main(params)
 
