@@ -1,4 +1,4 @@
-runtime_name = "2base_bidi_lstm_seq_hidden_mean_loss_sum_added_layer_dropout_0.5_relu_imdb_prep_w2v_pre_trained_embedding,added_metrics"
+runtime_name = "base_bidi_lstm_seq_hidden_mean_loss_sum_added_layer_dropout_0.5_relu_imdb_prep_w2v_pre_trained_embedding,added_metrics"
 device = 'cpu'
 
 base_dir = "/content/drive/MyDrive/DL_projects/text_classification/"
