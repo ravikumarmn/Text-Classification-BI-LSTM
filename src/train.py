@@ -17,13 +17,89 @@ import numpy as np
 import pandas as pd
 import seaborn as sn
 import matplotlib.pyplot as plt
+from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
 
-def score(y_true,y_pred):
-    tp = (y_true * y_pred).sum().to(torch.float32).item()
-    tn = ((1-y_true) * (1 - y_pred)).sum().to(torch.float32).item()
-    fp = ((1-y_true) * y_pred).sum().to(torch.float32).item()
-    fn = (y_true * (1- y_pred)).sum().to(torch.float32).item()
-    return tp,tn,fp,fn
+
+class Metrics:
+    epsilon = 1e-7
+    def __init__(self,y_true,y_pred):
+        self.y_true = np.array(y_true)
+        self.y_pred = np.array(y_pred)
+
+    def compute_tp_tn_fp_fn(self) -> float:
+        """
+        True positive  - actual = 1, predicted = 1
+        False positive - actual = 1, predicted = 0
+        False negative - actual = 0, predicted = 1
+        True negative  - actual = 0, predicted = 0
+        """
+        tp = sum((self.y_true == 1) & (self.y_pred == 1))
+        tn = sum((self.y_true == 0) & (self.y_pred == 0))
+        fp = sum((self.y_true == 1) & (self.y_pred == 0))
+        fn = sum((self.y_true == 0) & (self.y_pred == 1))
+
+        return (tp,tn,fp,fn)
+
+    def compute_accuracy(self) -> float:
+        """
+        Accuracy  = TP + TN / FP + FN + TP + TN
+
+        """
+        # assert len(self.y_true) == len(self.y_pred)
+        tp,tn,fp,fn = self.compute_tp_tn_fp_fn()
+        accuracy_score = (tp + tn)/(tp + tn + fp +fn + self.epsilon)
+        return accuracy_score
+
+    def compute_precision(self) -> float:
+        """
+        Precision = TP / TP + FP
+        
+        """
+        tp,tn,fp,_ = self.compute_tp_tn_fp_fn()
+        precision_score = tp/(tp + fp + self.epsilon)
+
+        return precision_score
+
+    def compute_recall(self) -> float:
+        """
+        Recall = TP / TP + FN
+
+        """
+        tp,tn,_,fn = self.compute_tp_tn_fp_fn()
+        recall_score = tp /(tp + fn + self.epsilon)
+
+        return recall_score
+
+    def compute_f1_score(self) -> float:
+        """
+        F1-Score = (2*precision * recall)/(precision + recall)
+
+        """
+        tp,tn,fp,fn = self.compute_tp_tn_fp_fn()
+        precision = self.compute_precision()
+        recall = self.compute_recall()
+        f1_score = (2 * precision * recall)/(precision + recall)
+        
+        return f1_score
+
+    def compute_confustion_matrix(self) -> list:
+        tp,tn,fp,fn = self.compute_tp_tn_fp_fn()
+        confusion_mat = [[tp,fp],[fn,tn]]
+        return np.array(confusion_mat)
+
+    def metrics_report(self) -> dict:
+      results = {}
+      function_name = [x for x in dir(Metrics) if "__" not in x and (x!= 'metrics_report')]
+      for x in function_name:
+          results.update({x:getattr(Metrics,x)(self)})
+      return results
+
+# def score(y_true,y_pred):
+#     tp = (y_true * y_pred).sum().to(torch.float32).item()
+#     tn = ((1-y_true) * (1 - y_pred)).sum().to(torch.float32).item()
+#     fp = ((1-y_true) * y_pred).sum().to(torch.float32).item()
+#     fn = (y_true * (1- y_pred)).sum().to(torch.float32).item()
+#     return tp,tn,fp,fn
     
 
     # confusion_mat = [[tp,fp],[fn,tn]]
@@ -44,15 +120,8 @@ def train(model,device,train_dataloader,optimizer,criterion):
     train_loss = list()
     tqdm_obj_loader = tqdm(enumerate(train_dataloader),total = len(iter(train_dataloader)))
     tqdm_obj_loader.set_description_str('Train')
-    train_preds = list()
-    target_true = 0
-    predicted_true = 0
-    correct_true = 0
-
-    true_p = 0
-    true_n = 0
-    false_p = 0
-    false_n = 0
+    all_pred = list()
+    all_true = list()
 
     for batch_index,data in tqdm_obj_loader:
         optimizer.zero_grad()
@@ -61,55 +130,37 @@ def train(model,device,train_dataloader,optimizer,criterion):
         target = data['label']#b,n
         
         loss = criterion(pred,target)
-        # running_loss += (loss_batch - running_loss)/(batch_index + 1)
-        
         loss.backward()
         optimizer.step()
 
         train_loss.append(loss.item())
 
         preds_bool = target == (pred.data>0.5).float()
-        # target_true += torch.sum(target == 0).float()
-        # predicted_true += torch.sum(preds_bool).float()
-        # correct_true += torch.sum(preds_bool == target *preds_bool)
-
-        # recall = correct_true / target_true
-        # precision = correct_true / predicted_true
-        # F1_score = 2 * (precision * recall)/(precision + recall)
         y_pred = preds_bool.float().to("cpu")
         y_true = target.to('cpu')
 
-        tp,tn,fp,fn = score(y_true=y_true,y_pred=y_pred)
-        true_p += tp
-        true_n += tn
-        false_n += fp
-        false_n += fn
+        all_pred.extend(y_pred)
+        all_true.extend(y_true)
 
-        train_preds.extend(preds_bool.int().tolist())
+    metrics = Metrics(all_true,all_pred)
+    precision = metrics.compute_precision()
+    recall = metrics.compute_recall()
+    f1_score = metrics.compute_f1_score()
+    
 
-    epsilon = 1e-7
-    precision = true_p/(true_p + false_p + epsilon)
-    recall = true_p /(true_p + false_n+epsilon)
-    f1_score = (2 * recall * precision)/(recall + precision +epsilon)
 
-    return sum(train_loss)/len(train_loss),sum(train_preds)/len(train_preds),correct_true,target_true,predicted_true,precision,recall,f1_score
+    return train_loss,all_pred,metrics
 
 def evaluate(model,device,test_dataloader,criterion):
     model.eval()
     test_loss = list()
-    test_preds = list()
+    # test_preds = list()
     tqdm_obj_val_loader = tqdm(enumerate(test_dataloader),total = len(iter(test_dataloader)))
     tqdm_obj_val_loader.set_description_str('Val')
-    target_true = 0 
-    predicted_true = 0
-    correct_true = 0
 
-    true_p = 0
-    true_n = 0
-    false_p = 0
-    false_n = 0
     all_pred = list()
     all_true = list()
+    
     with torch.no_grad():
         for batch_index,data in tqdm_obj_val_loader:
             data = {k:v.to(device) for k, v in data.items()}
@@ -123,21 +174,20 @@ def evaluate(model,device,test_dataloader,criterion):
             y_pred = preds_bool.float().to("cpu")
             y_true = target.to('cpu')
     
-            tp,tn,fp,fn = score(y_true=y_true,y_pred=y_pred)
-            true_p += tp
-            true_n += tn
-            false_n += fp
-            false_n += fn
+            
+
             all_pred.extend(y_pred.tolist())
             all_true.extend(y_true.tolist())
 
-            test_preds.extend(preds_bool.int().tolist())
-        epsilon = 1e-7
+            # test_preds.extend(preds_bool.int().tolist())
 
-        precision = true_p/(true_p + false_p +epsilon)
-        recall = true_p /(true_p + false_n+epsilon)
-        f1_score = (2 * recall * precision)/(recall + precision +epsilon)
-        return sum(test_loss)/len(test_loss),sum(test_preds)/len(test_preds),precision,recall,f1_score,np.array(all_pred),np.array(all_true)
+        metrics = Metrics(all_true,all_pred)
+        precision = metrics.compute_precision()
+        recall = metrics.compute_recall()
+        f1_score = metrics.compute_f1_score()
+        
+
+        return test_loss,all_pred,all_true,metrics
 
 def train_fn(model,train_dataloader,test_dataloader,criterion,optimizer,params):
     tqdm_obj_epoch = tqdm(range(params["EPOCHS"]),total = params["EPOCHS"],leave = False)
@@ -145,16 +195,17 @@ def train_fn(model,train_dataloader,test_dataloader,criterion,optimizer,params):
     val_loss = np.inf
 
     for epoch in tqdm_obj_epoch:
-        training_loss,training_accuracy,correct_true,target_true,predicted_true,precision,recall,f1_score = train(model,params["device"],train_dataloader,optimizer,criterion)
-        validation_loss,validation_accuracy,precision,recall,f1_score,all_pred,all_true = evaluate(model,params["device"],test_dataloader,criterion)
-        
-        tp = (all_true * all_pred).sum()
-        tn = ((1-all_true) * (1 - all_pred)).sum()
-        fp = ((1-all_true) * all_pred).sum()
-        fn = (all_true * (1- all_pred)).sum()
-        confusion_mat = [[tp,fp],[fn,tn]]
+        train_loss,all_pred,train_metrics = train(model,params["device"],train_dataloader,optimizer,criterion)
+        training_loss = sum(train_loss)/len(train_loss)
+        training_accuracy = sum(all_pred)/len(all_pred)
 
-        x,y = np.array(confusion_mat).shape
+        test_loss,all_pred,all_true,test_metrics = evaluate(model,params["device"],test_dataloader,criterion)
+        validation_loss = sum(test_loss)/len(test_loss)
+        validation_accuracy = sum(all_pred)/len(all_pred)
+
+        confu_matrix = test_metrics.compute_confustion_matrix()
+        
+        x,y = confu_matrix.shape
         if validation_loss < val_loss:
             val_loss = validation_loss
 
@@ -168,7 +219,7 @@ def train_fn(model,train_dataloader,test_dataloader,criterion,optimizer,params):
         else:
             early_stopping += 1
         if early_stopping == params["patience"]:
-            df_cm = pd.DataFrame(confusion_mat, range(x), range(y))
+            df_cm = pd.DataFrame(confu_matrix, range(x), range(y))
             # df_norm_col=(df_cm-df_cm.mean())/df_cm.std()
             ax = plt.axes()
             sn.set(font_scale=1.4) # for label size
@@ -181,7 +232,7 @@ def train_fn(model,train_dataloader,test_dataloader,criterion,optimizer,params):
             
 
         print(f'Epoch: {epoch+1}/{params["EPOCHS"]}\t,Train loss: {training_loss}\tTrain acc: {training_accuracy}\tVal loss:{validation_loss}\tVal acc:{validation_accuracy}\
-            Recall: {recall}\tPrecision : {precision}\tf1_score : {f1_score}')
+            Recall: {test_metrics.compute_recall()}\tPrecision : {test_metrics.compute_precision()}\tf1_score : {test_metrics.compute_f1_score()}')
         
         #,Train loss: {training_loss}\tTrain acc: {training_accuracy}\tVal loss:{validation_loss}\tVal acc:{validation_accuracy}
         wandb.log({
@@ -193,13 +244,13 @@ def train_fn(model,train_dataloader,test_dataloader,criterion,optimizer,params):
             "epoch/training_error" : 1 - training_accuracy,
             "epoch/training_accuracy" : training_accuracy,
 
-            "epoch/recall" : recall,
-            "epoch/precision" : precision,
-            "epoch/f1_score" : f1_score,
+            "epoch/recall" : test_metrics.compute_recall(),
+            "epoch/precision" : test_metrics.compute_precision(),
+            "epoch/f1_score" : test_metrics.compute_f1_score(),
             "epoch/confu_matrix" : wandb.plot.confusion_matrix(
                 probs=None,
-                preds = all_pred.astype(int),
-                y_true=all_true.astype(int),
+                preds = all_pred,
+                y_true=all_true,
                 class_names= list(params['mapping'].keys())
             )
         })
@@ -219,6 +270,7 @@ def main(config):
     criterion = nn.BCELoss(reduction='sum')
     optimizer = Adam(my_model.parameters(), lr=config["LEARNING_RATE"])#weight_decay=1e-5
     my_model.to(config["device"])
+
     model = train_fn(my_model,train_dataloader,test_dataloader,criterion,optimizer,config)
     return model,test_dataloader
 
@@ -230,7 +282,7 @@ if __name__ == '__main__':
             notes = "taking mean of all hidden state, bidirectional lstm, loss reduction is sum,added recall,precision,f1_score,confu_matrix",
             tags = ['baseline',"lstm","loss_sum"],
             config=params,
-            mode = 'online')
+            mode = 'disabled')
 
     model,test_dataloader = main(params)
 

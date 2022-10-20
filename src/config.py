@@ -18,7 +18,7 @@ input_column = ["review"]
 max_seq_len = 500
 BATCH_SIZE = 16
 LEARNING_RATE = 0.001
-EPOCHS = 100
+EPOCHS = 10
 
 EMBED_SIZE = 32
 HIDDEN_SIZE = 32
