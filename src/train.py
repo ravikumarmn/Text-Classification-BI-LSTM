@@ -195,13 +195,13 @@ def train_fn(model,train_dataloader,test_dataloader,criterion,optimizer,params):
     val_loss = np.inf
 
     for epoch in tqdm_obj_epoch:
-        train_loss,all_pred,train_metrics = train(model,params["device"],train_dataloader,optimizer,criterion)
+        train_loss,train_all_pred,train_metrics = train(model,params["device"],train_dataloader,optimizer,criterion)
         training_loss = sum(train_loss)/len(train_loss)
-        training_accuracy = sum(all_pred)/len(all_pred)
+        training_accuracy = sum(train_all_pred)/len(train_all_pred)
 
-        test_loss,all_pred,all_true,test_metrics = evaluate(model,params["device"],test_dataloader,criterion)
+        test_loss,test_all_pred,test_all_true,test_metrics = evaluate(model,params["device"],test_dataloader,criterion)
         validation_loss = sum(test_loss)/len(test_loss)
-        validation_accuracy = sum(all_pred)/len(all_pred)
+        validation_accuracy = sum(test_all_pred)/len(test_all_pred)
 
         confu_matrix = test_metrics.compute_confustion_matrix()
         
