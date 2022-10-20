@@ -57,7 +57,7 @@ class CustomDataset(Dataset):
             self.data = dataset
 
     def __len__(self):
-        return len(self.data[:1000])
+        return len(self.data)
 
     def __getitem__(self,idx):
         seq,label = self.data[idx]
