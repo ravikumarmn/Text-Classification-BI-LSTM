@@ -279,7 +279,7 @@ if __name__ == '__main__':
     print("Params :",params,sep="\n")
     wandb.init(project='text_classifier',
             name = params["runtime_name"] + f'_seq2seq_hidden_{params["HIDDEN_SIZE"]}_embed_{params["EMBED_SIZE"]}',
-            notes = "taking mean of all hidden state, bidirectional lstm, loss reduction is sum,added recall,precision,f1_score,confu_matrix",
+            notes = "taking mean of all hidden state, bidirectional lstm, loss reduction is sum,metrics class added",
             tags = ['baseline',"lstm","loss_sum"],
             config=params,
             mode = 'online')
